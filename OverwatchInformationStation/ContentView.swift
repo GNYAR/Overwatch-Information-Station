@@ -15,7 +15,7 @@ struct ContentView: View {
           .navigationBarHidden(true)
           .tabItem { TabItem(symbol: "house", text: "Home") }
         
-        Heros()
+        Heroes()
           .navigationBarHidden(true)
           .tabItem { TabItem(symbol: "person.3", text: "Heros") }
         

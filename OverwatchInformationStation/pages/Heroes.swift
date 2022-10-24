@@ -1,5 +1,5 @@
 //
-//  Heros.swift
+//  Heroes.swift
 //  OverwatchInformationStation
 //
 //  Created by User20 on 2022/10/12.
@@ -7,27 +7,25 @@
 
 import SwiftUI
 
-struct Heros: View {
-    
+struct Heroes: View {
   var body: some View {
     let cols = [GridItem(), GridItem()]
     
     ScrollView(.vertical, showsIndicators: true) {
       LazyVGrid(columns: cols, spacing: 16) {
-        ForEach(heroes.indices) { i in
-          let x = heroes[i]
-          let name = x[0].replacingOccurrences(of: "_", with: " ")
+        ForEach(heroes) { x in
+          let name = x.name.replacingOccurrences(of: "_", with: " ")
           
           NavigationLink(
-            destination: HeroDetail(heroIndex: i),
+            destination: HeroDetail(hero: x),
             label: {
               VStack {
-                Image(x[0])
+                Image(x.name)
                   .resizable()
                   .scaledToFit()
                   .frame(height: 160)
                 
-                Image("DarkCircle\(x[1])")
+                Image("DarkCircle\(x.role)")
                   .resizable()
                   .scaledToFit()
                   .frame(height: 32)
@@ -54,7 +52,7 @@ struct Heros_Previews: PreviewProvider {
   static var previews: some View {
     ZStack {
       Color(.blue)
-      Heros()
+      Heroes()
     }
   }
 }
