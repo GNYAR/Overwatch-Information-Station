@@ -20,7 +20,6 @@ struct ContentView: View {
           .tabItem { TabItem(symbol: "person.3", text: "Heros") }
         
         Media()
-          .navigationBarHidden(true)
           .tabItem { TabItem(symbol: "photo.tv", text: "Media") }
       }
       .overlay(
