@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct HeroDetail: View {
-  @State var heroIndex: Int = 0;
+  @State var hero: Hero = heroes[0];
   
   var body: some View {
-    let hero = heroes[heroIndex]
-    let name =  hero[0]
-    let role = hero[1]
-    let location = hero[2]
-    let introduction = hero[3]
+    let name =  hero.name
+    let role = hero.role.rawValue
+    let location = hero.location
+    let description = hero.description
     
     ZStack {
       Image("\(name)Background")
@@ -28,7 +27,7 @@ struct HeroDetail: View {
             .fontWeight(.heavy)
           
           
-          Text(introduction)
+          Text(description)
             .foregroundColor(.white)
             .frame(width: 350)
             .padding(.vertical, 16)

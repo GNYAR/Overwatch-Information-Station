@@ -15,7 +15,7 @@
 		3B86451728F69B7E003B41C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B86451628F69B7E003B41C0 /* Assets.xcassets */; };
 		3B86451A28F69B7E003B41C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B86451928F69B7E003B41C0 /* Preview Assets.xcassets */; };
 		3B86452528F6A515003B41C0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86452428F6A515003B41C0 /* Home.swift */; };
-		3B86452928F6A536003B41C0 /* Heros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86452828F6A536003B41C0 /* Heros.swift */; };
+		3B86452928F6A536003B41C0 /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86452828F6A536003B41C0 /* Heroes.swift */; };
 		3B86452C28F6A58B003B41C0 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86452B28F6A58B003B41C0 /* Media.swift */; };
 		3B86453028F6A648003B41C0 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86452F28F6A648003B41C0 /* More.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +31,7 @@
 		3B86451928F69B7E003B41C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B86451B28F69B7E003B41C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B86452428F6A515003B41C0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		3B86452828F6A536003B41C0 /* Heros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heros.swift; sourceTree = "<group>"; };
+		3B86452828F6A536003B41C0 /* Heroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
 		3B86452B28F6A58B003B41C0 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		3B86452F28F6A648003B41C0 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				3B86452428F6A515003B41C0 /* Home.swift */,
-				3B86452828F6A536003B41C0 /* Heros.swift */,
+				3B86452828F6A536003B41C0 /* Heroes.swift */,
 				3B86452B28F6A58B003B41C0 /* Media.swift */,
 				3B86452F28F6A648003B41C0 /* More.swift */,
 				3B01AB1429069EB300B1D127 /* HeroDetail.swift */,
@@ -180,7 +180,7 @@
 				3B01AB0229065D7100B1D127 /* PlayerView.swift in Sources */,
 				3B86451328F69B7C003B41C0 /* OverwatchInformationStationApp.swift in Sources */,
 				3B01AB1529069EB300B1D127 /* HeroDetail.swift in Sources */,
-				3B86452928F6A536003B41C0 /* Heros.swift in Sources */,
+				3B86452928F6A536003B41C0 /* Heroes.swift in Sources */,
 				3B86453028F6A648003B41C0 /* More.swift in Sources */,
 				3B61292E2906C8F4009143D2 /* data.swift in Sources */,
 				3B86452C28F6A58B003B41C0 /* Media.swift in Sources */,
