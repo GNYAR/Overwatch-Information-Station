@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct Heroes: View {
-    
   var body: some View {
     let cols = [GridItem(), GridItem()]
     

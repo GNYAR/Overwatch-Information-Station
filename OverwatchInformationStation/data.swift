@@ -58,3 +58,38 @@ let heroes = [
   Hero(name:"ZARYA", role: .Tank, location: "Taiwan", description: "The best hero."),
   Hero(name:"ZENYATTA", role: .Support, location: "Taiwan", description: "The best hero."),
 ]
+
+struct LinkItem: Identifiable {
+  let id = UUID()
+
+  let text: String
+  let url: String
+}
+
+let newsLinks = [
+  LinkItem(text: "News", url: "https://overwatch.blizzard.com/en-us/news/)"),
+  LinkItem(text: "Patch Notes", url: "https://overwatch.blizzard.com/en-us/news/patch-notes/"),
+  LinkItem(text: "Facebook", url: "https://www.facebook.com/OverwatchEU"),
+  LinkItem(text: "Twitter", url: "https://www.twitter.com/OverwatchEU"),
+  LinkItem(text: "YouTube", url: "https://www.youtube.com/OverwatchEU"),
+  LinkItem(text: "Instagram", url: "https://www.instagram.com/overwatcheu/")
+]
+
+let communityLinks = [
+  LinkItem(text: "Forums", url: "https://us.forums.blizzard.com/en/overwatch/"),
+  LinkItem(text: "Overwatch League", url: "https://www.overwatchleague.com/en-us/"),
+  LinkItem(text: "Contenders", url: "https://overwatchleague.com/contenders"),
+  LinkItem(text: "Open Division", url: "https://overwatchleague.com/open-division-about"),
+]
+
+let playLinks = [
+  LinkItem(text:"Battle.net", url: "https://shop.battle.net/product/overwatch?blzcmp=ow_gamesite"),
+  LinkItem(text:"Xbox", url: "https://www.xbox.com/games/store/overwatch-origins-edition/C1C4DZJPBC2V/0001"),
+  LinkItem(text:"PlayStation", url: "https://store.playstation.com/product/EP0002-PPSA07821_00-OWORIGINS0000000"),
+  LinkItem(text:"Nintendo Switch", url: "https://www.nintendo.com/store/products/overwatch-2-switch/")
+]
+
+let blizzardLinks = [
+  LinkItem(text: "Visit Blizzard.com", url: "https://www.blizzard.com/"),
+  LinkItem(text: "All Games", url: "https://www.blizzard.com/games")
+]

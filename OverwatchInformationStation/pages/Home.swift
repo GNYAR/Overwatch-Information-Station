@@ -9,17 +9,16 @@ import SwiftUI
 
 struct Home: View {
   let links = [
-    ["desktopcomputer", "https://shop.battle.net/product/overwatch?blzcmp=ow_gamesite"],
-    ["x.circle.fill", "https://www.xbox.com/games/store/overwatch-origins-edition/C1C4DZJPBC2V/0001"],
-    ["p.circle.fill", "https://store.playstation.com/product/EP0002-PPSA07821_00-OWORIGINS0000000"],
-    ["gamecontroller.fill", "https://www.nintendo.com/store/products/overwatch-2-switch/"]
+    LinkItem(text:"desktopcomputer", url: "https://shop.battle.net/product/overwatch?blzcmp=ow_gamesite"),
+    LinkItem(text:"x.circle.fill", url: "https://www.xbox.com/games/store/overwatch-origins-edition/C1C4DZJPBC2V/0001"),
+    LinkItem(text:"p.circle.fill", url: "https://store.playstation.com/product/EP0002-PPSA07821_00-OWORIGINS0000000"),
+    LinkItem(text:"gamecontroller.fill", url: "https://www.nintendo.com/store/products/overwatch-2-switch/")
   ]
-  
   
   var body: some View {
     ZStack {
       PlayerView()
-
+      
       GeometryReader { x in
         VStack(spacing: 20) {
           Spacer()
@@ -40,9 +39,9 @@ struct Home: View {
             .fontWeight(.heavy)
           
           HStack(spacing: 24) {
-            ForEach(links.indices) { i in
-              Link(destination: URL(string: links[i][1])!, label: {
-                Image(systemName: links[i][0])
+            ForEach(links) { y in
+              Link(destination: URL(string: y.url)!, label: {
+                Image(systemName: y.text)
                   .resizable()
                   .scaledToFit()
                   .frame(width: 40)
@@ -52,7 +51,7 @@ struct Home: View {
             }
           }
           .padding(.top, 36)
-            
+          
           Spacer()
         }
         .frame(maxWidth: 350)
