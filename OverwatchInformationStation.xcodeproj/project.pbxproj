@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B01AB0229065D7100B1D127 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01AB0129065D7100B1D127 /* PlayerView.swift */; };
 		3B86451328F69B7C003B41C0 /* OverwatchInformationStationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86451228F69B7C003B41C0 /* OverwatchInformationStationApp.swift */; };
 		3B86451528F69B7C003B41C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86451428F69B7C003B41C0 /* ContentView.swift */; };
 		3B86451728F69B7E003B41C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B86451628F69B7E003B41C0 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B01AB0129065D7100B1D127 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		3B86450F28F69B7C003B41C0 /* OverwatchInformationStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OverwatchInformationStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B86451228F69B7C003B41C0 /* OverwatchInformationStationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverwatchInformationStationApp.swift; sourceTree = "<group>"; };
 		3B86451428F69B7C003B41C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		3B86452328F6A4E6003B41C0 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				3B01AB0129065D7100B1D127 /* PlayerView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			files = (
 				3B86451528F69B7C003B41C0 /* ContentView.swift in Sources */,
 				3B86452528F6A515003B41C0 /* Home.swift in Sources */,
+				3B01AB0229065D7100B1D127 /* PlayerView.swift in Sources */,
 				3B86451328F69B7C003B41C0 /* OverwatchInformationStationApp.swift in Sources */,
 				3B86452928F6A536003B41C0 /* Heros.swift in Sources */,
 				3B86453028F6A648003B41C0 /* More.swift in Sources */,

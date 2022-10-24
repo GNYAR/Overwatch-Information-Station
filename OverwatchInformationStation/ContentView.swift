@@ -25,7 +25,8 @@ struct ContentView: View {
       }
       .overlay(
         MoreButton(),
-        alignment: .bottomTrailing)
+        alignment: .bottomTrailing
+      )
     }
   }
 }
