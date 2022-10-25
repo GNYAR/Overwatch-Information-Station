@@ -17,7 +17,9 @@ struct Heroes: View {
           let name = x.name.replacingOccurrences(of: "_", with: " ")
           
           NavigationLink(
-            destination: HeroDetail(hero: x),
+            destination: HeroDetail(hero: x)
+              .navigationBarTitle(name)
+              .navigationBarTitleDisplayMode(.inline),
             label: {
               VStack {
                 Image(x.name)
