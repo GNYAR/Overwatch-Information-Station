@@ -9,6 +9,8 @@ import SwiftUI
 import AVKit
 
 struct Media: View {
+  @State private var selectedImage: Int? = nil
+  
   let comics = [
     "YŌKAI",
     "New_Blood_#5_of_5",
@@ -35,12 +37,30 @@ struct Media: View {
             .padding(.horizontal)
           
           ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 16) {
+            HStack(alignment: .top, spacing: 16) {
               ForEach(comics.indices) { i in
-                Image("\(comics[i])")
+                let isSelected = selectedImage == i
+                
+                Image(comics[i])
                   .resizable()
                   .scaledToFit()
-                  .frame(height: x.size.height * 0.6)
+                  .frame(height: x.size.height * (isSelected ? 0.8 : 0.6))
+                  .opacity(isSelected ? 0.4 : 1)
+                  .padding(.bottom, isSelected ? 0 : 24)
+                  .overlay(
+                    Text(comics[i].replacingOccurrences(of: "_", with: " "))
+                      .foregroundColor(isSelected ? .accentColor : .primary)
+                      .font(isSelected ? .title2 : .body)
+                      .fontWeight(isSelected ? .bold : .regular)
+                      .padding(.horizontal)
+                      .background(isSelected ? Rectangle()
+                                    .foregroundColor(Color("BackgroundColor"))
+                                    .transition(.slide) : nil),
+                    alignment: isSelected ? .center : .bottom
+                  )
+                  .onTapGesture {
+                    selectedImage = isSelected ? nil : i
+                  }
               }
             }
             .padding(.horizontal)
@@ -95,11 +115,13 @@ struct Media: View {
           .padding()
         }
       }
-    }.onAppear {
+    }
+    .onAppear {
       let playItem = AVPlayerItem(url: URL(string: musicUrl)!)
       audioPlayer.replaceCurrentItem(with: playItem)
       audioPlayer.play()
     }
+    .animation(.default, value: selectedImage)
   }
 }
 
