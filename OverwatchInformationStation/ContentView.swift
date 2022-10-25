@@ -9,24 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
+    let isPad = UIDevice.current.userInterfaceIdiom == .pad
+    
     NavigationView {
-      TabView() {
-        Home()
-          .navigationBarHidden(true)
-          .tabItem { TabItem(symbol: "house", text: "Home") }
-        
-        Heroes()
-          .navigationBarHidden(true)
-          .tabItem { TabItem(symbol: "person.3", text: "Heros") }
-        
-        Media()
-          .navigationBarHidden(true)
-          .tabItem { TabItem(symbol: "photo.tv", text: "Media") }
+      if isPad {
+        More()
+          .navigationTitle("More Information")
+        Pages()
+      } else {
+        Pages()
+          .overlay(MoreButton(), alignment: .bottomTrailing)
       }
-      .overlay(
-        MoreButton(),
-        alignment: .bottomTrailing
-      )
     }
   }
 }
@@ -64,5 +57,23 @@ struct MoreButton: View {
       })
       .offset(x: -24, y: -60)
     
+  }
+}
+
+struct Pages: View {
+  var body: some View {
+    TabView() {
+      Home()
+        .navigationBarHidden(true)
+        .tabItem { TabItem(symbol: "house", text: "Home") }
+      
+      Heroes()
+        .navigationBarHidden(true)
+        .tabItem { TabItem(symbol: "person.3", text: "Heros") }
+      
+      Media()
+        .navigationBarHidden(true)
+        .tabItem { TabItem(symbol: "photo.tv", text: "Media") }
+    }
   }
 }

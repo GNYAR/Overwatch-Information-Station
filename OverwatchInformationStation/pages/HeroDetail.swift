@@ -47,6 +47,7 @@ struct HeroDetail: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 40)
+                .foregroundColor(.black)
                 .background(RoleContainer())
               
               Text(location)
