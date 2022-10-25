@@ -94,6 +94,8 @@ struct Media: View {
             .padding(.horizontal)
           
           HStack {
+            Spacer()
+            
             Button(action: {
               audioPlayer.play()
             }) {
@@ -111,8 +113,11 @@ struct Media: View {
                 .scaledToFit()
                 .frame(width: x.size.width * 0.4)
             }
+            
+            Spacer()
           }
-          .padding()
+          .padding(.bottom, 48)
+          
         }
       }
     }
